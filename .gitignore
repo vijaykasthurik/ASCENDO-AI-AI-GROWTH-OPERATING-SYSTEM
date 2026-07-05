@@ -1,0 +1,15 @@
+backend/.env
+backend/chroma_data/
+backend/logs/*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+dist/
+build/
+.DS_Store
+*.egg-info/
+*.env
+*.env.local
+*.log

@@ -1,0 +1,28 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: ascendo-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - ascendo-mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: ascendo-backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    env_file:
+      - ./backend/.env
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017
+    ports:
+      - "8000:8000"
+    volumes:
+      - ascendo-chroma-data:/app/chroma_data
+
+volumes:
+  ascendo-mongo-data:
+  ascendo-chroma-data:
