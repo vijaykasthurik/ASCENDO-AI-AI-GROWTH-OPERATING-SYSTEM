@@ -38,7 +38,7 @@ async def send_email(to_email: str, subject: str, html_body: str, text_body: str
     message.attach(MIMEText(html_body, "html"))
 
     try:
-        await aiosmtplib.send(
+        errors, response = await aiosmtplib.send(
             message,
             hostname=settings.smtp_host,
             port=settings.smtp_port,
@@ -46,6 +46,12 @@ async def send_email(to_email: str, subject: str, html_body: str, text_body: str
             password=settings.smtp_pass,
             start_tls=True,
         )
-        logger.info("Sent email to %s: %s", to_email, subject)
+        if errors:
+            # aiosmtplib only raises when *every* recipient is refused; a
+            # partial refusal (e.g. one bad address among several) lands here
+            # instead, so it must be logged explicitly or it's invisible.
+            logger.warning("Partial send failure to %s: %s (server said: %s)", to_email, errors, response)
+        else:
+            logger.info("Sent email to %s: %s (server said: %s)", to_email, subject, response)
     except Exception:
         logger.exception("Failed to send email to %s: %s", to_email, subject)
