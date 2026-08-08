@@ -1,7 +1,7 @@
 # Ascendo AI — The AI Growth Operating System
 
 <p align="center">
-  <b>🏆 Best Digital Marketing Product — RoboVanta 2K26</b>
+  <b>Best Digital Marketing Product — RoboVanta 2K26</b>
 </p>
 
 <p align="center">
@@ -33,13 +33,13 @@ planning and execution.
 
 ## Key Features
 
-### 🧠 AI Agent Council
+### AI Agent Council
 A coordinated set of specialized agents — Strategy, Marketing, Sales, Lead
 Generation, Customer Success, and Analytics — each responsible for one
 domain of business growth, orchestrated through a LangGraph-based workflow
 that lets them reason together rather than in isolation.
 
-### 📊 Growth Engines
+### Growth Engines
 Purpose-built analysis engines translate raw business context into concrete,
 prioritized action:
 - **Strategy Engine** — long-term positioning and growth roadmap
@@ -49,21 +49,21 @@ prioritized action:
 - **Customer Success Engine** — retention and expansion plays
 - **Analytics Engine** — performance measurement and reporting
 
-### 🤖 AI Copilot
+### AI Copilot
 A conversational interface for querying your business's growth plan,
 getting recommendations, and iterating on strategy in natural language.
 
-### 📁 Document-Aware Planning
+### Document-Aware Planning
 Upload business documents (e.g. a README, business plan, or product doc) and
 Ascendo AI parses and grounds its recommendations in your actual business
 context using a vector knowledge store (ChromaDB) for retrieval-augmented
 reasoning.
 
-### 📈 Live Dashboard & Reporting
+### Live Dashboard and Reporting
 Track growth opportunities, agent activity, and generated reports in a
 real-time dashboard, with exportable reports for stakeholders.
 
-### 🔐 Secure Multi-Tenant Accounts
+### Secure Multi-Tenant Accounts
 JWT-based authentication, per-project workspaces, and Stripe-powered
 subscription billing (Starter / Growth / Scale tiers) for teams operating
 multiple businesses or clients.
@@ -155,5 +155,5 @@ See [`LICENSE`](./LICENSE) for the full terms.
 ---
 
 <p align="center">
-  Built with ❤️ — Ascendo AI, the AI operating system your business grows on.
+  Ascendo AI — the AI operating system your business grows on.
 </p>
